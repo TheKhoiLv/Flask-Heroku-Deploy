@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Educational registration form</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <style>
+        html, body {
+            min-height: 100%;
+        }
+        body, div, form, input, select, p { 
+            padding: 0;
+            margin: 0;
+            outline: none;
+            font-family: Roboto, Arial, sans-serif;
+            font-size: 16px;
+            color: #eee;
+        }
+        body {
+            background: url("/uploads/media/default/0001/01/b5edc1bad4dc8c20291c8394527cb2c5b43ee13c.jpeg") no-repeat center;
+            background-size: cover;
+        }
+        h1, h2 {
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+        h2 {
+            margin: 0 0 0 8px;
+        }
+        .main-block {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            padding: 25px;
+            background: rgba(0, 0, 0, 0.5); 
+        }
+        .left-part, form {
+            padding: 25px;
+        }
+        .left-part {
+            text-align: center;
+        }
+        .fa-graduation-cap {
+            font-size: 72px;
+        }
+        form {
+            background: rgba(0, 0, 0, 0.7); 
+        }
+        .title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .info {
+            display: flex;
+            flex-direction: column;
+        }
+        input, select {
+            padding: 5px;
+            margin-bottom: 30px;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #eee;
+        }
+        input::placeholder {
+            color: #eee;
+        }
+        option:focus {
+            border: none;
+        }
+        option {
+            background: black; 
+            border: none;
+        }
+        .checkbox input {
+            margin: 0 10px 0 0;
+            vertical-align: middle;
+        }
+        .checkbox a {
+            color: #26a9e0;
+        }
+        .checkbox a:hover {
+            color: #85d6de;
+        }
+        .btn-item, button {
+            padding: 10px 5px;
+            margin-top: 20px;
+            border-radius: 5px; 
+            border: none;
+            background: #26a9e0; 
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 400;
+            color: #fff;
+        }
+        .btn-item {
+            display: inline-block;
+            margin: 20px 5px 0;
+        }
+        button {
+            width: 100%;
+        }
+        button:hover, .btn-item:hover {
+            background: #85d6de;
+        }
+        @media (min-width: 568px) {
+            html, body {
+                height: 100%;
+            }
+            .main-block {
+                flex-direction: row;
+                height: calc(100% - 50px);
+            }
+            .left-part, form {
+                flex: 1;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-block">
+        <div class="left-part">
+            <h1><strong>K&K Solution and Technology</strong></h1>
+            <h2>Intern - Python Developer</h2>
+            <p><strong>Description:</strong><br>
+            We are looking for trainee developers of Python in the Summer of 2024.<br>
+            <strong>Duration:</strong> 2 months, 1st July 2024 - 31st August 2024.<br>
+            English proficiency is necessary for interviews with a Russian mentor.<br>
+            <br>
+            <strong>Who We Are:</strong><br>
+            Talented team using brand-new tech for VR, AR, IoT, web, mobile, Enterprise, Unity Gaming.<br>
+            <strong>Technologies:</strong> Python, С#, PHP, Objective-C, JavaScript, Java, Swift.<br>
+            <br>
+            <strong>Who You Are:</strong><br>
+            Teamwork experience in education projects.<br>
+            Familiar with Python and code readability.<br>
+            Understand browser request behavior.<br>
+            Aware of structured data benefits in databases.<br>
+            <br>
+            <strong>Preferred Skills:</strong><br>
+            Projects in Python, Django.<br>
+            Code optimization and profiling.<br>
+            Interest in Backend/Frontend/API/DB.<br>
+            Experience with databases and Web applications.<br>
+            Docker knowledge.<br>
+            Desire to learn daily!</p>
+        </div>
+        <form action="/submit" method="post">
+            <div class="title">
+                <i class="fas fa-pencil-alt"></i> 
+                <h2>Register here</h2>
+            </div>
+            <div class="info">
+                <input class="fname" type="text" name="name" placeholder="Full name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="tel" name="phone" placeholder="Phone number" required>
+                
+                <select name="experience" required>
+                    <option value="">Select experience</option>
+                    <option value="0">0</option>
+                    <option value="1-3">1 - 3</option>
+                    <option value="3-6">3 - 6</option>
+                    <option value="6-12">6 - 12</option>
+                </select>
+                <select name="salary" required>
+                    <option value="">Select salary</option>
+                    <option value="1-2tr">1 - 2tr</option>
+                    <option value="2-3tr">2 - 3tr</option>
+                    <option value="3-4tr">3 - 4tr</option>
+                </select>
+                <select name="location" required>
+                    <option value="">Select location</option>
+                    <option value="TP. Hồ Chí Minh">TP. Hồ Chí Minh</option>
+                    <option value="Hà Nội">Hà Nội</option>
+                    <option value="Quy Nhơn">Quy Nhơn</option>
+                    <option value="Đà Nẵng">Đà Nẵng</option>
+                </select>
+                <div class="form-group" id="skills">
+                    <label for="skill">Skill</label><br>
+                    <input class="form-check-input" type="checkbox" value="Python basic" id="pythonBasic" name="skill">
+                    <label class="form-check-label" for="pythonBasic">
+                        Python basic
+                    </label>
+                    <input class="form-check-input" type="checkbox" value="Django" id="django" name="skill">
+                    <label class="form-check-label" for="django">
+                        Django
+                    </label>
+                    <input class="form-check-input" type="checkbox" value="Backend" id="backend" name="skill">
+                    <label class="form-check-label" for="backend">
+                        Backend
+                    </label>
+                    <input class="form-check-input" type="checkbox" value="Frontend" id="frontend" name="skill">
+                    <label class="form-check-label" for="frontend">
+                        Frontend
+                    </label>
+                    <br>
+                    <input class="form-check-input" type="checkbox" value="API" id="api" name="skill">
+                    <label class="form-check-label" for="api">
+                        API
+                    </label>
+                    <input class="form-check-input" type="checkbox" value="Database" id="database" name="skill">
+                    <label class="form-check-label" for="database">
+                        Database
+                    </label>
+                    <input class="form-check-input" type="checkbox" value="HTML/CSS" id="htmlcss" name="skill">
+                    <label class="form-check-label" for="htmlcss">
+                        HTML/CSS
+                    </label>
+                    <input class="form-check-input" type="checkbox" value="JS" id="js" name="skill">
+                    <label class="form-check-label" for="js">
+                        JS
+                    </label>
+                    <br>
+                    <input class="form-check-input" type="checkbox" value="REST" id="rest" name="skill">
+                    <label class="form-check-label" for="rest">
+                        REST
+                    </label>
+                    <input class="form-check-input" type="checkbox" value="Docker" id="docker" name="skill">
+                    <label class="form-check-label" for="docker">
+                        Docker
+                    </label>
+                </div>
+                
+                <script>
+                    // Kiểm tra xem ít nhất một kỹ năng đã được chọn hay không trước khi gửi biểu mẫu
+                    document.querySelector('form').addEventListener('submit', function(event) {
+                        const skills = document.querySelectorAll('input[name="skill"]');
+                        let atLeastOneSkillSelected = false;
+                        skills.forEach(function(skill) {
+                            if (skill.checked) {
+                                atLeastOneSkillSelected = true;
+                            }
+                        });
+                        if (!atLeastOneSkillSelected) {
+                            event.preventDefault(); // Ngăn chặn việc gửi biểu mẫu nếu không có kỹ năng nào được chọn
+                            alert('Please select at least one skill.'); // Hiển thị thông báo
+                        }
+                    });
+                </script>
+                
+            </div>
+            <button type="submit" href="/">Submit</button>
+        </form>
+        
+    </div>
+</body>
+</html>
